@@ -1,0 +1,8 @@
+{
+  "name": "kingdoms-of-numbers-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kingdoms of Numbers Online. PvP realtime 1 vs 1 (+ Room Master); gameplay langsung antar-perangkat (WebRTC), pensinyalan & relay di Vercel + Upstash Redis.",
+  "scripts": { "dev": "node dev-server.js", "test": "node test/api.test.js", "test:e2e": "node test/e2e.js" },
+  "engines": { "node": ">=20" }
+}
