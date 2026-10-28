@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<title>Kingdoms of Numbers · Online</title>
+<title>BRICKBAR · Online</title>
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 <style>
 :root{--p1:#3b82f6;--p2:#ef4444;--ink:#fff4dc;--panel:rgba(34,27,56,.78)}
@@ -165,7 +165,7 @@ body.spec #touch,body.spec #rep{display:none!important}
 <div class="bn b"><svg viewBox="0 0 64 56" aria-hidden="true"><path d="M8 46 L12 18 L24 30 L32 10 L40 30 L52 18 L56 46Z" fill="#fff4dc" stroke="#3a2a10" stroke-width="3" stroke-linejoin="round"/><rect x="8" y="46" width="48" height="7" rx="2" fill="#3b82f6" stroke="#3a2a10" stroke-width="3"/></svg><h2>Kerajaan Biru</h2><div class="who">Pemain 1</div>
 <div class="kk"><kbd>WASD</kbd><span>Bergerak</span><kbd>E</kbd><span>Ambil / masukkan balok</span><kbd>Q</kbd><span>Jatuhkan / ambil kembali</span></div>
 <div class="st"><span>Tembok 1800 HP</span><span>Kastil 1200 HP</span><span>2 meriam, 1 mortar, 9 balok</span></div><div class="tc">Layar sentuh: joystick &amp; tombol di sisi kiri</div></div>
-<div class="ctr"><svg class="crest" viewBox="0 0 120 110" aria-hidden="true"><g stroke="#3a2a10" stroke-width="3" stroke-linejoin="round"><path d="M14 14 L66 66 L58 74 L10 22Z" fill="#e8eef7"/><path d="M106 14 L54 66 L62 74 L110 22Z" fill="#e8eef7"/><rect x="48" y="62" width="24" height="9" rx="3" transform="rotate(45 60 66)" fill="#ffc02e"/><rect x="48" y="62" width="24" height="9" rx="3" transform="rotate(-45 60 66)" fill="#ffc02e"/><path d="M36 100 V62 L46 70 L53 54 L60 68 L67 54 L74 70 L84 62 V100Z" fill="#ffd35c"/><circle cx="60" cy="88" r="6" fill="#ef4444"/><circle cx="46" cy="88" r="4" fill="#3b82f6"/><circle cx="74" cy="88" r="4" fill="#3b82f6"/></g></svg><h1 id="ovT">KINGDOMS<small>OF NUMBERS</small></h1>
+<div class="ctr"><svg class="crest" viewBox="0 0 120 110" aria-hidden="true"><g stroke="#3a2a10" stroke-width="3" stroke-linejoin="round"><path d="M14 14 L66 66 L58 74 L10 22Z" fill="#e8eef7"/><path d="M106 14 L54 66 L62 74 L110 22Z" fill="#e8eef7"/><rect x="48" y="62" width="24" height="9" rx="3" transform="rotate(45 60 66)" fill="#ffc02e"/><rect x="48" y="62" width="24" height="9" rx="3" transform="rotate(-45 60 66)" fill="#ffc02e"/><path d="M36 100 V62 L46 70 L53 54 L60 68 L67 54 L74 70 L84 62 V100Z" fill="#ffd35c"/><circle cx="60" cy="88" r="6" fill="#ef4444"/><circle cx="46" cy="88" r="4" fill="#3b82f6"/><circle cx="74" cy="88" r="4" fill="#3b82f6"/></g></svg><h1 id="ovT">BRICKBAR</h1>
 <p id="ovP">Dua kerajaan berhadapan. Hitung dengan cepat, tembakkan meriam dan mortar, runtuhkan tembok lawan, lalu hancurkan kastilnya.</p>
 <div class="btns"><button id="ovBtn">Mulai Perang (Lokal)</button><button id="onBtn">Main Online</button><button id="howBtn">Cara Bermain</button><button id="menuBtn">Kembali ke Menu Utama</button></div>
 <div id="onp"><div id="on-lobby" class="ostack">
@@ -1867,7 +1867,7 @@ const Net={
  copy(kind){
   const text=kind==='code'?this.code:this.shareUrl()+(kind==='master'?'&role=master':'');
   const done=()=>this.toast(kind==='code'?'Kode disalin':'Tautan disalin');
-  if(kind!=='code'&&navigator.share){navigator.share({title:'Kingdoms of Numbers',text:'Ayo bertanding di Kingdoms of Numbers!',url:text}).catch(()=>{});return;}
+  if(kind!=='code'&&navigator.share){navigator.share({title:'BRICKBAR',text:'Ayo bertanding di BRICKBAR!',url:text}).catch(()=>{});return;}
   const fb=()=>{try{const t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();done();}catch(e){this.toast(kind!=='code'?text:'Kode: '+text);}};
   if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(text).then(done,fb);else fb();},
 
